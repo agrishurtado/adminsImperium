@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar id="toolbarh" color="black">
+    <ion-buttons slot="start">
+      <ion-button>
+        <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\menu.png">
+      </ion-button>
+    </ion-buttons>
+  
+
+        <ion-buttons  slot="end">
+          <ion-button>
+            <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\back-arrow.png">
+          </ion-button>
+        </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<!-- pantalla terminada en fronend  -->
+
+
+<ion-content id="content">
+  <ion-toolbar id="toolbar" color="black">
+    <ion-buttons slot="start">
+      <ion-button>
+        <img id="logoimperium"   src="\assets\logoImperium.png">
+      </ion-button>
+    </ion-buttons>
+        <ion-title slot="secondary" id="labelh">posts</ion-title>    
+  </ion-toolbar>
+
+  
+  <ion-card>
+    <img  src="\assets\logoImperium.png" alt="">
+  </ion-card>
+
+  <ion-card>
+    
+     <ion-button mode="md" id="btnMenus"  >
+        <img id="whatsapp" slot="start" src="\assets\iconosmenu\whatsapp.png" alt="">
+      
+        <ion-label> 
+          <a href="https://api.whatsapp.com">
+            <h3 style="color: whitesmoke;">{{ telefono}}</h3> </a>          
+        </ion-label>
+    </ion-button>
+    <!-- <ion-button mode="md" id="btnMenus"  href="{{url}}">Whatsapp
+      <img id="whatsapp" slot="start" src="\assets\iconosmenu\whatsapp.png" alt="">
+    </ion-button><br> -->
+    <!-- <ion-button mode="md" id="btnMenus" [routerLink]="['/posts-private']">privates</ion-button><br> -->
+
+    <hr>
+    <ion-button mode="md" id="btnMenus">publics</ion-button><br>
+    
+
+
+  </ion-card>
+
+  
+  
+</ion-content>

@@ -1,27 +1,39 @@
-#container {
+ #toolbar{   
+   padding-top: 30px;
+   margin: 20px;
+}
+#labelh{
+  margin: 15px;
+  text-align: justify;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: whitesmoke;
+  font-size: 15px;
+}
+
+#content{    
+  --ion-background-color: #000000 ;  
+}
+#titulos{
+  color: whitesmoke;
+}
+#logoimperium{
+  margin: 1px;
+  width: 120px;
+}
+
+#logo{
+  width: 40%;
+}
+ion-col{
+  margin-top: 5px;
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+}
+#label{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: whitesmoke;
+  font-size: 15px;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+ion-card{
+  padding-top:40px;
 }

@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar id="toolbarh" color="black">
+    <ion-buttons slot="start">
+      <ion-button>
+        <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\menu.png">
+      </ion-button>
+    </ion-buttons>
+  
+
+        <ion-buttons  slot="end">
+          <ion-button>
+            <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\back-arrow.png">
+          </ion-button>
+        </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content id="content">
+  <ion-toolbar id="toolbar" color="black">
+    <ion-buttons slot="start">
+      <ion-button>
+        <img id="logoimperium"   src="\assets\logoImperium.png">
+      </ion-button>
+    </ion-buttons>     
+        <ion-title slot="secondary" id="labelh">Polls</ion-title>    
+  </ion-toolbar>
+
+     <!-- diseñado para 3 botones -->
+     <ion-card>
+      <img  src="\assets\logoImperium.png" alt="">
+    </ion-card>
+  
+    <ion-card>
+   
+      <ion-button mode="md" id="btnMenus" [routerLink]="['/polls-create']">ver encuestas </ion-button><br>
+      <hr>
+      <ion-button mode="md" id="btnMenus" [routerLink]="['/polls-performed']">crear encuesta</ion-button><br>
+      
+  
+  
+    </ion-card>
+
+</ion-content>

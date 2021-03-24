@@ -1,20 +1,86 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+
+
+<!-- pantalla terminada en fronend  -->
+
+
+<ion-content id="content">
+  <ion-toolbar id="toolbar" color="black">
+    <ion-buttons slot="start">
+      <ion-button>
+        <img id="logoimperium"   src="\assets\logoImperium.png">
+      </ion-button>
+    </ion-buttons>
+  
+     
+        <ion-title slot="secondary" id="labelh">ADMINISTRADOR</ion-title>
+    
   </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  
+<ion-card >
+  <ion-grid>
+    <ion-row class="top-10">
+      <ion-col size="6" [routerLink]="['/acces']">
+        <img id="logo"src="\assets\iconosmenu\accesos.png">
+        <br>
+         <label id="label">Accesos</label>
+    </ion-col>
+  
+      <ion-col size="6" [routerLink]="['/posts']">
+        <img id="logo"src="\assets\iconosmenu\mensajes.png">
+        <br>
+        <label id="label">Mensajes</label>
+      </ion-col>
+      <ion-col size="6" [routerLink]="['/balance']">
+        <img id="logo"src="\assets\iconosmenu\balance.png">
+        <br>
+        <label id="label">Balance</label>
+  </ion-col>
+      
+      <ion-col size="6" [routerLink]="['/directory']">
+        <img id="logo"src="\assets\iconosmenu\directorio.png">
+        <br>
+        <label id="label">Directorio</label>
+      </ion-col>
+  
+      <ion-col size="6" [routerLink]="['/market']">
+        <img id="logo"src="\assets\iconosmenu\market.png">
+        <br>
+        <label id="label">Market</label>
+      </ion-col>
+  
+      <ion-col size="6" [routerLink]="['/reservations']">
+        <img id="logo"src="\assets\iconosmenu\reservaciones.png">
+        <br>
+        <label id="label">Reservaciones</label>
+      </ion-col>
+  
+      <ion-col size="6" [routerLink]="['/polls']">
+        <img id="logo"src="\assets\iconosmenu\encuestas.png">
+        <br>
+        <label id="label">Encuestas</label>
+      </ion-col>
+      <ion-col size="6" [routerLink]="['/releases']">
+        <img id="logo"src="\assets\iconosmenu\comunicados.png">
+        <br>
+        <label id="label">Comunicados</label>
+      </ion-col>
+  
+  
+      <ion-col size="6" [routerLink]="['/configurations']">
+        <img id="logo"src="\assets\iconosmenu\configuraciones.png">
+        <br>
+        <label id="label">Configuraciones</label>
+      </ion-col>
+      <ion-col size="6" [routerLink]="['/emergencies']">
+        <img id="logo"src="\assets\iconosmenu\emergencias.png">
+        <br>
+        <label id="label">Emergencias</label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+    <!-- <img id="logo"src="\assets\logoImperium.png"> -->
+ 
+</ion-card>
+  <!-- <app-explore-container id="titulos" name="Tab 1 page"></app-explore-container> -->
 </ion-content>

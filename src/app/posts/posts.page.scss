@@ -1,0 +1,65 @@
+#toolbarh{   
+  padding-top: 10px;
+}
+#toolbar{   
+    padding-top: 5px;
+ }
+ #menus{
+   width: 25px;
+ }
+ #labelh{
+   margin: 15px;
+   text-align: center;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   color: whitesmoke;
+   font-size: 15px;
+ }
+ 
+ #content{    
+   --ion-background-color: #000000 ;  
+ }
+ #titulos{
+   color: whitesmoke;
+ }
+ #logoimperium{
+   margin: 1px;
+   width: 120px;
+ }
+ 
+ #logo{
+   width: 40%;
+ }
+ ion-col{
+   margin-top: 5px;
+   text-align: center;
+ }
+ #label{
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   color: whitesmoke;
+   font-size: 15px;
+ }
+ 
+ ion-card{
+   padding-top:40px;
+  position: wrap;
+  
+ }
+ #btnMenus{
+  //  height:35px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   width: 100%;
+   color: whitesmoke;
+  --background:black;
+  --background-activated:#333;
+ }
+
+ hr{
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.075), rgb(255, 255, 255), rgba(255, 255, 255, 0.075));
+ }
+  #whatsapp{
+    margin: 5px;
+    width: 35px;
+  }

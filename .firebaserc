@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "admins-7b289": {
+      "hosting": {
+        "app": [
+          "admins-7b289"
+        ]
+      }
+    }
+  }
+}

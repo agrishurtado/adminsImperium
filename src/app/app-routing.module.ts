@@ -1,20 +1,25 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {
-  path: 'login',
-  loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-},
-
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
   {
     path: '',
     redirectTo: 'login',
     pathMatch: 'full'
   },
   {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
+    // canActivate:[AuthGuard]
   },
   {
     path: 'acces',
@@ -136,6 +141,18 @@ const routes: Routes = [
     path: 'posts-public',
     loadChildren: () => import('./posts-public/posts-public.module').then( m => m.PostsPublicPageModule)
   },
+  {
+    path: 'verify-email',
+    loadChildren: () => import('./verify-email/verify-email.module').then( m => m.VerifyEmailPageModule)
+  },
+  {
+    path: 'forgot-password',
+    loadChildren: () => import('./forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
+  },
+
+
+ 
+
  
  
 

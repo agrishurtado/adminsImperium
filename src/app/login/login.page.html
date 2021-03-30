@@ -15,13 +15,24 @@
 <ion-card>
   <img  src="\assets\logoImperium.png" alt="">
 </ion-card>
-  
-<ion-card align="center">
-  <label id="label">Correo</label>
-  <ion-input type="email" placeholder="Nombre"></ion-input>
  
-  <label id="label">Password</label>
-  <ion-input type="password" placeholder="password"></ion-input>
-</ion-card>
-<ion-button mode="md" id="btnMenus">Guardar</ion-button>
-</ion-content>
+  
+<form >
+  <ion-card align="center">
+    <label id="label">Correo</label>
+    <ion-input type="email" placeholder="Nombre" #email></ion-input>
+   
+    <label id="label">Password</label>
+    <ion-input type="password" placeholder="password" #password></ion-input>
+  </ion-card>
+  </form>
+  <ion-button mode="md" id="btnMenus" (click)="onSubmit( email, password)">Login</ion-button>
+  <hr>
+  <ion-button mode="md" id="btnMenus" (click)="onSubmitGoogle( email, password)">Login Google</ion-button>
+  <hr>
+  <!-- <ion-button mode="md" id="btnMenus" [routerLink]="['/register']">Register</ion-button> -->
+  <a href="/register">Registrarse</a>
+  <br><a href="/forgot-password">Forgote pasword</a>
+  </ion-content>
+  
+

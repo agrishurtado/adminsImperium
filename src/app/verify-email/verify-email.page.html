@@ -1,0 +1,28 @@
+
+
+<!-- pantalla terminada en fronend  -->
+
+
+<ion-content id="content" >
+  <ion-toolbar id="toolbar" color="black">
+    <ion-buttons slot="start">
+      <ion-button>
+        <img id="logoimperium"   src="\assets\logoImperium.png">
+      </ion-button>
+    </ion-buttons>    
+        <ion-title slot="secondary" id="labelh">Veryfy Email</ion-title>    
+  </ion-toolbar>
+
+<ion-card>
+  <img  src="\assets\logoImperium.png" alt="">
+</ion-card>
+
+ 
+<ion-card align="center" *ngIf="user$ | async as user">
+<h2>Gracias por registrarte!</h2>
+<p>Te hemos enviado un Correo de confirmacion a <strong>{{user.email}}</strong></p>
+<p>Por favor verifica tu Email y presiona en el link de verificacion que aparece en el.</p>
+</ion-card>
+
+<ion-button mode="md" id="btnMenus" (click)="onSubmit()">Guardar</ion-button>
+</ion-content>

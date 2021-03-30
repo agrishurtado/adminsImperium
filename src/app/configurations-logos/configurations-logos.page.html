@@ -1,24 +1,26 @@
-<ion-header>
-  <ion-toolbar id="toolbarh" color="black">
-    <ion-buttons slot="start">
-      <ion-button>
-        <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\menu.png">
-      </ion-button>
-    </ion-buttons>
-  
 
-        <ion-buttons  slot="end">
-          <ion-button>
-            <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\back-arrow.png">
-          </ion-button>
-        </ion-buttons>
-  </ion-toolbar>
-</ion-header>
 <!-- pantalla terminada en fronend  
 pantalla primaria ejemplo a todas  -->
 
 
 <ion-content id="content">
+  <ion-header>
+    <ion-toolbar id="toolbarh" color="black">
+      <ion-buttons slot="start">
+        <ion-button>
+          <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\menu.png">
+        </ion-button>
+      </ion-buttons>
+    
+  
+          <ion-buttons  slot="end">
+            <ion-button>
+              <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\back-arrow.png">
+            </ion-button>
+          </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
   <ion-toolbar id="toolbar" color="black">
     <ion-buttons slot="start">
       <ion-button>
@@ -33,7 +35,7 @@ pantalla primaria ejemplo a todas  -->
   <ion-card>
     <img  src="\assets\logoImperium.png" alt="">
   </ion-card>
-  <ion-button mode="md" id="btnMenus" >
+  <ion-button mode="md" id="btnMenus" (click)="loadImageFromDevice()">
     <!-- <ion-icon lazy="true" slot="start" name="image" style="color: white; font-size: 20px;"></ion-icon> -->
     Tomar foto o <br> seleccionar de galeria.
   </ion-button>
@@ -42,6 +44,6 @@ pantalla primaria ejemplo a todas  -->
  <hr>
 </ion-card>
 
-<ion-button mode="md" id="btnMenus">SUBIR</ion-button>
+<ion-button mode="md" id="btnMenus" (click)="create()">SUBIR</ion-button>
 
 </ion-content>

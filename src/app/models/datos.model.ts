@@ -10,4 +10,8 @@ export interface Datos{
     fecha: string;
     clave:string;
     codigo:string;
+    lugar: string;
+    costo:string;
+    estatus:string;
+    numPersonas: string;
 }

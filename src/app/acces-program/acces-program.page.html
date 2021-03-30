@@ -1,24 +1,25 @@
-<ion-header>
-  <ion-toolbar id="toolbarh" color="black">
-    <ion-buttons slot="start">
-      <ion-button>
-        <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\menu.png">
-      </ion-button>
-    </ion-buttons>
-  
 
-        <ion-buttons  slot="end">
-          <ion-button>
-            <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\back-arrow.png">
-          </ion-button>
-        </ion-buttons>
-  </ion-toolbar>
-</ion-header>
 <!-- pantalla terminada en fronend  
 pantalla primaria ejemplo a todas  -->
 
 
 <ion-content id="content">
+  <ion-header>
+    <ion-toolbar id="toolbarh" color="black">
+      <ion-buttons slot="start">
+        <ion-button>
+          <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\menu.png">
+        </ion-button>
+      </ion-buttons>
+    
+  
+          <ion-buttons  slot="end">
+            <ion-button>
+              <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\back-arrow.png">
+            </ion-button>
+          </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
   <ion-toolbar id="toolbar" color="black">
     <ion-buttons slot="start">
       <ion-button>
@@ -28,18 +29,26 @@ pantalla primaria ejemplo a todas  -->
         <ion-title   id="labelh">Acces Program</ion-title>
   </ion-toolbar>
 
-
-
-  <!-- List of Text Items -->
-<ion-list mode="md" >
+<h1 id="label">Indefinidas</h1>
+ <!-- List of Text Items -->
+ <ion-list mode="md"  *ngFor="let post of datos ">
   <ion-item >
-    <ion-label id="label" >Pokémon Yellow</ion-label>
+    <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\usuario.png">br
+    <ion-label id="label" >{{post.nombre}}</ion-label>
+    <ion-label id="label" >{{post.tipoVisita}}</ion-label>
   </ion-item>
-  <hr> 
+  <hr>   
+</ion-list>
+
+<h1 id="label">Definida</h1>
+ <!-- List of Text Items -->
+ <ion-list mode="md"  *ngFor="let post of datosd ">
   <ion-item >
-    <ion-label id="label" >Pokémon Yellow</ion-label>
+    <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\usuario.png">br
+    <ion-label id="label" >{{post.nombre}}</ion-label>
+    <ion-label id="label" >{{post.tipoVisita}}</ion-label>
   </ion-item>
-  <hr> 
+  <hr>   
 </ion-list>
 
 

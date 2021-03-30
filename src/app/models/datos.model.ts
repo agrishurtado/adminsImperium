@@ -5,4 +5,9 @@ export interface Datos{
     tipoRegistro:string;
     Email:string;
     imag:string;
+    tipoFecha:string;
+    tipoVisita: string;
+    fecha: string;
+    clave:string;
+    codigo:string;
 }

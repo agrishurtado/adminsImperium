@@ -1,24 +1,26 @@
-<ion-header>
-  <ion-toolbar id="toolbarh" color="black">
-    <ion-buttons slot="start">
-      <ion-button>
-        <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\menu.png">
-      </ion-button>
-    </ion-buttons>
-  
 
-        <ion-buttons  slot="end">
-          <ion-button>
-            <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\back-arrow.png">
-          </ion-button>
-        </ion-buttons>
-  </ion-toolbar>
-</ion-header>
 <!-- pantalla terminada en fronend  
 pantalla primaria ejemplo a todas  -->
 
 
 <ion-content id="content">
+  <ion-header>
+    <ion-toolbar id="toolbarh" color="black">
+      <ion-buttons slot="start">
+        <ion-button>
+          <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\menu.png">
+        </ion-button>
+      </ion-buttons>
+    
+  
+          <ion-buttons  slot="end">
+            <ion-button>
+              <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\back-arrow.png">
+            </ion-button>
+          </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
   <ion-toolbar id="toolbar" color="black">
     <ion-buttons slot="start">
       <ion-button>
@@ -31,26 +33,34 @@ pantalla primaria ejemplo a todas  -->
 <ion-card>
   
     <ion-label id="label">name</ion-label>
-    <ion-input id="input" placeholder="Name"></ion-input>
+    <ion-input id="input" placeholder="Name" [(ngModel)]="post.nombre"></ion-input>
 
  
   <ion-label id="label">fecha</ion-label>
-  <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
+  <ion-datetime displayFormat="MM DD YY" placeholder="Select Date" [(ngModel)]="post.fecha"></ion-datetime>
 
   <ion-label id="label">tipo de fecha</ion-label>
-  <ion-input id="input" placeholder="tipo de fecha"></ion-input>
+  <ion-select placeholder="Tipo de Fecha" [(ngModel)]="post.tipoFecha">
+    <ion-select-option value="indefinida">Indefinida</ion-select-option>
+    <ion-select-option value="definida">Definida</ion-select-option>
+  </ion-select>
 
   <ion-label id="label">tipo de visita </ion-label>
-  <ion-input id="input" placeholder="tipo de visita"></ion-input>
+  <ion-select placeholder="Tipo de Visita" [(ngModel)]="post.tipoVisita">
+    <ion-select-option value="familiar">Familiar</ion-select-option>
+    <ion-select-option value="amistad">Amistad</ion-select-option>
+    <ion-select-option value="limpieza">Limpieza</ion-select-option>
+    <ion-select-option value="proveedor">proveedor</ion-select-option>
+  </ion-select>
 
   <ion-label id="label">domicilio</ion-label>
-  <ion-input id="input" placeholder="domicilio"></ion-input>
+  <ion-input id="input" placeholder="domicilio" [(ngModel)]="post.domicilio"></ion-input>
 
   <ion-label id="label">clave</ion-label>
-  <ion-input id="input" placeholder="clave"></ion-input>
+  <ion-input id="input" placeholder="clave" [(ngModel)]="post.clave"></ion-input>
 
-  <ion-button mode="md" id="btnMenus">Generar codigo</ion-button>
+   <ion-button mode="md" id="btnMenus">Generar codigo</ion-button>
 </ion-card>
-<ion-button mode="md" id="btnMenus">crear</ion-button>
+<ion-button mode="md" id="btnMenus" (click)="crear(post)">crear</ion-button>
 
 </ion-content>

@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar id="toolbarh" color="black">
+    <ion-buttons slot="start">
+      <ion-button>
+        <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\menu.png">
+      </ion-button>
+    </ion-buttons>
+  
+
+        <ion-buttons  slot="end">
+          <ion-button>
+            <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\back-arrow.png">
+          </ion-button>
+        </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="content">
+  <ion-toolbar id="toolbar" color="black">
+    <ion-buttons slot="start">
+      <ion-button>
+        <img id="logoimperium"   src="\assets\logoImperium.png">
+      </ion-button>
+    </ion-buttons>     
+        <ion-title slot="secondary" id="labelh">Balance Cuenas</ion-title>    
+  </ion-toolbar>
+
+  <!-- diseñado para 3 botones -->
+  <!-- <ion-card>
+    <img  src="\assets\logoImperium.png" alt="">
+  </ion-card>
+  <br> -->
+
+  <ion-card>
+    <ion-item-divider color="primary">
+      <ion-label   class="subtitulo" slot="start">Ingresos</ion-label>
+      <ion-input slot="end" class="colorsubtitulo" disabled="true" routerLink="balancemenu">${{ingresos}}.00</ion-input>
+  </ion-item-divider>
+  <ion-card>
+    <ion-item >
+        <p  id="label">Pagos Mantenimiento = </p>              
+        <ion-input id="label" disabled="true" >${{totalm}}.00</ion-input>
+    </ion-item>
+    <ion-item>
+        <p  id="label">Pagos Areas Comunes = </p>
+        <ion-input id="label" disabled="true" >${{total2}}.00</ion-input>
+    </ion-item>
+    <br>
+    <ion-button mode="md" id="btnMenus">Registrar Ingreso</ion-button>
+</ion-card>
+<ion-item-divider color="primary">
+  <ion-label class="subtitulo">Gastos</ion-label>
+  <ion-input slot="end" class="colorsubtitulo" disabled="true" >${{gastos}}.00</ion-input>
+</ion-item-divider>
+<ion-card>
+  <ion-row>
+      <ion-col size="6">
+          <p id="label">SALDO DEL MES</p>
+      </ion-col>
+      <ion-col size="5">
+          <ion-item lines="none">
+              <ion-icon name="logo-usd" id="label" size="medium"></ion-icon>
+              <ion-label class="color" fill="outline" >{{salmes}}</ion-label>
+
+          </ion-item>
+      </ion-col>
+  </ion-row>
+ 
+    <ion-row>
+        <ion-col size="6">
+            <p id="label">SALDO EN CUENTA</p>
+        </ion-col>
+        <ion-col size="5">
+            <ion-item line="none" >
+                <ion-icon name="logo-usd" id="label" size="medium"></ion-icon>
+                <ion-label class="color" fill="outline" >{{madre}}
+                </ion-label>
+            </ion-item>
+        </ion-col>          
+    </ion-row>
+
+</ion-card>
+
+
+  </ion-card>
+
+</ion-content>

@@ -148,7 +148,23 @@ const routes: Routes = [
   {
     path: 'forgot-password',
     loadChildren: () => import('./forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
+  },  {
+    path: 'balance-cuentas',
+    loadChildren: () => import('./balance-cuentas/balance-cuentas.module').then( m => m.BalanceCuentasPageModule)
   },
+  {
+    path: 'balance-authorize',
+    loadChildren: () => import('./balance-authorize/balance-authorize.module').then( m => m.BalanceAuthorizePageModule)
+  },
+  {
+    path: 'balance-authorizem',
+    loadChildren: () => import('./balance-authorizem/balance-authorizem.module').then( m => m.BalanceAuthorizemPageModule)
+  },
+  {
+    path: 'balance-authorize-menu',
+    loadChildren: () => import('./balance-authorize-menu/balance-authorize-menu.module').then( m => m.BalanceAuthorizeMenuPageModule)
+  },
+
 
 
  

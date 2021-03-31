@@ -10,14 +10,46 @@ import {Datos } from '../models/datos.model';
 })
 export class ReservationCreatePage implements OnInit {
   post = {} as Datos;
+  refe:any;
+  datos:any;
+  datos1:any;
+
+ val : boolean;
+
+
   constructor(private firestore: AngularFirestore,
-    private router: Router) { }
+    private router: Router) {  }
 
   ngOnInit() {
+   
   }
 
+
+  async get(){
+    try {
+      this.refe = this.firestore.collection("reservaciones", ref => ref.where('fehca','==',this.post.fecha));
+      this.refe.snapshotChanges().subscribe(data=>{
+        this.datos1 = data.map(e=>{
+          return{
+            id: e.payload.doc.id,
+            lugar: e.payload.doc.data()["lugar"],
+            fecha: e.payload.doc.data()["fecha"],
+          }
+        })
+      })
+     
+
+
+
+    } catch (error) {
+      console.log("Error: en ver colonos");
+    }
+  }
+
+
   async crear(post: Datos){
-    // if(this.validation()){
+    // this.get();
+    if(this.validation()){
     try {
       // falta el nombre de la tabla
       await this.firestore.collection("reservaciones").add(post);      
@@ -25,7 +57,7 @@ export class ReservationCreatePage implements OnInit {
       console.log('Error: crear los datos');
     }   
     
-  // }   
+  }   
 }
 
   validation(){
@@ -53,11 +85,12 @@ export class ReservationCreatePage implements OnInit {
       console.log("falta el estatus");
       return false;
     }
-    if(!this.post.numPersonas){
-      console.log("falta el numero de personas");
-      return false;
-    }
+
+  
+    
     return true;
   }
+
+
 
 }

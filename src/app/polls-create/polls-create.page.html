@@ -34,78 +34,78 @@ pantalla primaria ejemplo a todas  -->
   
  <ion-item>
   <ion-label id="label"  style="color: whitesmoke;"  position="floating">Nombre de la Encuesta</ion-label>
-  <ion-input id="input" placeholder="Nombre"></ion-input>
+  <ion-input id="input" placeholder="Nombre"  [(ngModel)]="nombre"></ion-input>
  </ion-item>
 
  <ion-item>
   <ion-label id="label"  style="color: whitesmoke;">fecha Inicio</ion-label>
-  <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
+  <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"  [(ngModel)]="post.fecha"></ion-datetime>
  </ion-item>
 
   <ion-item>
     <ion-label id="label"  style="color: whitesmoke;">fecha Final</ion-label>
-  <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
+  <ion-datetime displayFormat="MM DD YY" placeholder="Select Date" [(ngModel)]="post.fechaf"></ion-datetime>
   </ion-item>
 
   <ion-item lines="none">
     <ion-label id="label" style="color: whitesmoke;" position="floating">Mensaje</ion-label>
-    <ion-textarea id="labelt" rows="6" cols="20" placeholder="Ingrese preguntas o texto..."></ion-textarea>
+    <ion-textarea id="labelt" rows="6" cols="20" placeholder="Ingrese texto..."   [(ngModel)]="post.mensaje"></ion-textarea>
   </ion-item>
 
-<!-- <ion-item  lines="none">
+<ion-item  lines="none">
   <ion-label id="label" style="color: whitesmoke;" position="floating">Pregunta</ion-label>
-  <ion-input id="label" placeholder="Pregunta"></ion-input> 
-</ion-item>  -->
-
-
-<button class="accordion">Section 1</button>
-<div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-
-<!-- <ion-item  lines="none">
-  <ion-label id="label" style="color: whitesmoke;" position="floating">Pregunta2</ion-label>
-  <ion-input id="label" placeholder="Pregunta"></ion-input> 
+  <ion-input id="label" placeholder="Pregunta" [(ngModel)]="post.pregunta1"></ion-input> 
 </ion-item> 
+<ion-item  lines="none">
+  <ion-label id="label" style="color: whitesmoke;" position="floating">Respuestas</ion-label>
 
+  <ion-input id="input" placeholder="respuesta1" [(ngModel)]="post.respuesta1"></ion-input>  
+  <ion-input id="input" placeholder="Respuesta2" [(ngModel)]="post.Respuesta2"></ion-input>
+  <ion-input id="input" placeholder="Respuesta3" [(ngModel)]="post.Respuesta3"></ion-input>
+  <ion-input id="input" placeholder="Respuesta4" [(ngModel)]="post.Respuesta4"></ion-input>
+</ion-item>
+
+ <ion-item  lines="none">
+  <ion-label id="label" style="color: whitesmoke;" position="floating">Pregunta2</ion-label>
+  <ion-input id="label" placeholder="Pregunta" [(ngModel)]="post.Pregunta2"></ion-input> 
+</ion-item> 
 <ion-item lines="none">
   <ion-label id="label" style="color: whitesmoke;" position="floating">Respuestas2</ion-label>
 
-  <ion-input id="input" placeholder="respuesta1"></ion-input>  
-  <ion-input id="input" placeholder="Respuesta2"></ion-input>
-  <ion-input id="input" placeholder="Respuesta3"></ion-input>
-  <ion-input id="input" placeholder="Respuesta4"></ion-input>
+  <ion-input id="input" placeholder="respuesta1" [(ngModel)]="post.respuesta12"></ion-input>  
+  <ion-input id="input" placeholder="Respuesta2" [(ngModel)]="post.Respuesta22"></ion-input>
+  <ion-input id="input" placeholder="Respuesta3" [(ngModel)]="post.Respuesta32"></ion-input>
+  <ion-input id="input" placeholder="Respuesta4" [(ngModel)]="post.Respuesta42"></ion-input>
 </ion-item>
+
 <ion-item  lines="none">
   <ion-label id="label" style="color: whitesmoke;" position="floating">Pregunta3</ion-label>
-  <ion-input id="label" placeholder="Pregunta"></ion-input> 
+  <ion-input id="label" placeholder="Pregunta" [(ngModel)]="post.Pregunta3"></ion-input> 
 </ion-item> 
-
 <ion-item lines="none">
   <ion-label id="label" style="color: whitesmoke;" position="floating">Respuestas3</ion-label>
 
-  <ion-input id="input" placeholder="respuesta1"></ion-input>  
-  <ion-input id="input" placeholder="Respuesta2"></ion-input>
-  <ion-input id="input" placeholder="Respuesta3"></ion-input>
-  <ion-input id="input" placeholder="Respuesta4"></ion-input>
+  <ion-input id="input" placeholder="respuesta1" [(ngModel)]="post.respuesta13"></ion-input>  
+  <ion-input id="input" placeholder="Respuesta2" [(ngModel)]="post.Respuesta23"></ion-input>
+  <ion-input id="input" placeholder="Respuesta3" [(ngModel)]="post.Respuesta33"></ion-input>
+  <ion-input id="input" placeholder="Respuesta4" [(ngModel)]="post.Respuesta43"></ion-input>
 </ion-item>
 
 <ion-item  lines="none">
   <ion-label id="label" style="color: whitesmoke;" position="floating">Pregunta4</ion-label>
-  <ion-input id="label" placeholder="Pregunta"></ion-input> 
+  <ion-input id="label" placeholder="Pregunta" [(ngModel)]="post.Pregunta4"></ion-input> 
 </ion-item> 
-
 <ion-item lines="none">
   <ion-label id="label" style="color: whitesmoke;" position="floating">Respuestas4</ion-label>
 
-  <ion-input id="input" placeholder="respuesta1"></ion-input>  
-  <ion-input id="input" placeholder="Respuesta2"></ion-input>
-  <ion-input id="input" placeholder="Respuesta3"></ion-input>
-  <ion-input id="input" placeholder="Respuesta4"></ion-input>
-</ion-item> -->
+  <ion-input id="input" placeholder="respuesta1" [(ngModel)]="post.respuesta14"></ion-input>  
+  <ion-input id="input" placeholder="Respuesta2"[(ngModel)]="post.Respuesta24"></ion-input>
+  <ion-input id="input" placeholder="Respuesta3"[(ngModel)]="post.Respuesta34"></ion-input>
+  <ion-input id="input" placeholder="Respuesta4" [(ngModel)]="post.Respuesta44"></ion-input>
+</ion-item> 
  
   
 </ion-card>
-<ion-button mode="md" id="btnMenus">crear</ion-button>
+<ion-button mode="md" id="btnMenus" (click)="crear(post)">crear</ion-button>
 
 </ion-content>

@@ -1,24 +1,26 @@
-<ion-header>
-  <ion-toolbar id="toolbarh" color="black">
-    <ion-buttons slot="start">
-      <ion-button>
-        <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\menu.png">
-      </ion-button>
-    </ion-buttons>
-  
 
-        <ion-buttons  slot="end">
-          <ion-button>
-            <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\back-arrow.png">
-          </ion-button>
-        </ion-buttons>
-  </ion-toolbar>
-</ion-header>
 <!-- pantalla terminada en fronend  
 pantalla primaria ejemplo a todas  -->
 
 
 <ion-content id="content">
+  <ion-header>
+    <ion-toolbar id="toolbarh" color="black">
+      <ion-buttons slot="start">
+        <ion-button>
+          <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\menu.png">
+        </ion-button>
+      </ion-buttons>
+    
+  
+          <ion-buttons  slot="end">
+            <ion-button>
+              <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\back-arrow.png">
+            </ion-button>
+          </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
   <ion-toolbar id="toolbar" color="black">
     <ion-buttons slot="start">
       <ion-button>
@@ -28,28 +30,87 @@ pantalla primaria ejemplo a todas  -->
         <ion-title   id="labelh">Polls Create</ion-title>
   </ion-toolbar>
 
-<ion-card>
+<ion-card id="card">
   
-    <ion-label id="label">name</ion-label>
-    <ion-input id="input" placeholder="Name"></ion-input>
+ <ion-item>
+  <ion-label id="label"  style="color: whitesmoke;"  position="floating">Nombre de la Encuesta</ion-label>
+  <ion-input id="input" placeholder="Nombre"></ion-input>
+ </ion-item>
 
- 
-  <ion-label id="label">fecha</ion-label>
+ <ion-item>
+  <ion-label id="label"  style="color: whitesmoke;">fecha Inicio</ion-label>
   <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
+ </ion-item>
 
-  <ion-label id="label">tipo de fecha</ion-label>
-  <ion-input id="input" placeholder="tipo de fecha"></ion-input>
+  <ion-item>
+    <ion-label id="label"  style="color: whitesmoke;">fecha Final</ion-label>
+  <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
+  </ion-item>
 
-  <ion-label id="label">tipo de visita </ion-label>
-  <ion-input id="input" placeholder="tipo de visita"></ion-input>
+  <ion-item lines="none">
+    <ion-label id="label" style="color: whitesmoke;" position="floating">Mensaje</ion-label>
+    <ion-textarea id="labelt" rows="6" cols="20" placeholder="Ingrese preguntas o texto..."></ion-textarea>
+  </ion-item>
 
-  <ion-label id="label">domicilio</ion-label>
-  <ion-input id="input" placeholder="domicilio"></ion-input>
+<!-- <ion-item  lines="none">
+  <ion-label id="label" style="color: whitesmoke;" position="floating">Pregunta</ion-label>
+  <ion-input id="label" placeholder="Pregunta"></ion-input> 
+</ion-item>  -->
 
-  <ion-label id="label">clave</ion-label>
-  <ion-input id="input" placeholder="clave"></ion-input>
 
-  <ion-button mode="md" id="btnMenus">Generar codigo</ion-button>
+<ion-button id="boton" (click)="vermas(item, boton)">Ver mas</ion-button>
+
+<ion-card id="item" lines="none" style="display: none;">
+  <ion-label id="label" style="color: whitesmoke;" position="floating">Respuestas</ion-label>
+
+  <ion-input id="input"  placeholder="respuesta1"></ion-input>  
+  <ion-input id="input"  placeholder="Respuesta2"></ion-input>
+  <ion-input id="input"  placeholder="Respuesta3"></ion-input>
+  <ion-input id="input"  placeholder="Respuesta4"></ion-input>
+</ion-card>
+
+<!-- <ion-item  lines="none">
+  <ion-label id="label" style="color: whitesmoke;" position="floating">Pregunta2</ion-label>
+  <ion-input id="label" placeholder="Pregunta"></ion-input> 
+</ion-item> 
+
+<ion-item lines="none">
+  <ion-label id="label" style="color: whitesmoke;" position="floating">Respuestas2</ion-label>
+
+  <ion-input id="input" placeholder="respuesta1"></ion-input>  
+  <ion-input id="input" placeholder="Respuesta2"></ion-input>
+  <ion-input id="input" placeholder="Respuesta3"></ion-input>
+  <ion-input id="input" placeholder="Respuesta4"></ion-input>
+</ion-item>
+<ion-item  lines="none">
+  <ion-label id="label" style="color: whitesmoke;" position="floating">Pregunta3</ion-label>
+  <ion-input id="label" placeholder="Pregunta"></ion-input> 
+</ion-item> 
+
+<ion-item lines="none">
+  <ion-label id="label" style="color: whitesmoke;" position="floating">Respuestas3</ion-label>
+
+  <ion-input id="input" placeholder="respuesta1"></ion-input>  
+  <ion-input id="input" placeholder="Respuesta2"></ion-input>
+  <ion-input id="input" placeholder="Respuesta3"></ion-input>
+  <ion-input id="input" placeholder="Respuesta4"></ion-input>
+</ion-item>
+
+<ion-item  lines="none">
+  <ion-label id="label" style="color: whitesmoke;" position="floating">Pregunta4</ion-label>
+  <ion-input id="label" placeholder="Pregunta"></ion-input> 
+</ion-item> 
+
+<ion-item lines="none">
+  <ion-label id="label" style="color: whitesmoke;" position="floating">Respuestas4</ion-label>
+
+  <ion-input id="input" placeholder="respuesta1"></ion-input>  
+  <ion-input id="input" placeholder="Respuesta2"></ion-input>
+  <ion-input id="input" placeholder="Respuesta3"></ion-input>
+  <ion-input id="input" placeholder="Respuesta4"></ion-input>
+</ion-item> -->
+ 
+  
 </ion-card>
 <ion-button mode="md" id="btnMenus">crear</ion-button>
 

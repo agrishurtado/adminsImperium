@@ -46,8 +46,8 @@
    }
    #btnMenus{
     //  height:35px;
-     margin-top: 15px;
-     margin-bottom: 15px;
+     margin-top: 10px;
+     margin-bottom: 10px;
      width: 100%;
      color: whitesmoke;
     --background:black;
@@ -66,3 +66,17 @@
 
    }
   
+   #card{
+    padding-top:5px;
+    position: wrap;
+   }
+
+   #labelt{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: whitesmoke;
+    font-size: 10px;
+  }
+  
+  #item{
+    height: 20px;
+  }

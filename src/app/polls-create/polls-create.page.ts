@@ -12,4 +12,15 @@ export class PollsCreatePage implements OnInit {
   ngOnInit() {
   }
 
+  vermas(parrafo,boton){
+    document.getElementById(parrafo).style.display
+    if(document.getElementById(parrafo).style.display=='enable'){
+      document.getElementById(parrafo).style.display=='disable';
+      document.getElementById(boton).innerHTML=='Ver mas';
+    }else{
+      document.getElementById(parrafo).style.display=='enable';
+      document.getElementById(boton).innerHTML=='ocultar';
+    }
+  }
+
 }

@@ -9,7 +9,7 @@
 
         <ion-buttons  slot="end">
           <ion-button>
-            <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\back-arrow.png">
+            <img id="menus" [routerLink]="['/releases']"  src="\assets\iconosmenu\back-arrow.png">
           </ion-button>
         </ion-buttons>
   </ion-toolbar>
@@ -18,7 +18,7 @@
 pantalla primaria ejemplo a todas  -->
 
 
-<ion-content id="content">
+<!-- <ion-content id="content">
   <ion-toolbar id="toolbar" color="black">
     <ion-buttons slot="start">
       <ion-button>
@@ -30,27 +30,26 @@ pantalla primaria ejemplo a todas  -->
 
 <ion-card>
   
-    <ion-label id="label">name</ion-label>
-    <ion-input id="input" placeholder="Name"></ion-input>
-
- 
-  <ion-label id="label">fecha</ion-label>
-  <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
-
-  <ion-label id="label">tipo de fecha</ion-label>
-  <ion-input id="input" placeholder="tipo de fecha"></ion-input>
-
-  <ion-label id="label">tipo de visita </ion-label>
-  <ion-input id="input" placeholder="tipo de visita"></ion-input>
-
-  <ion-label id="label">domicilio</ion-label>
-  <ion-input id="input" placeholder="domicilio"></ion-input>
-
-  <ion-label id="label">clave</ion-label>
-  <ion-input id="input" placeholder="clave"></ion-input>
-
-  <ion-button mode="md" id="btnMenus">Generar codigo</ion-button>
+  <ion-label id="label">name</ion-label>
+  <ion-input id="input" placeholder="Name"></ion-input>
+  <label id="label">Asunto</label>
+  <ion-input id="input" placeholder="Asunto"></ion-input>
+  <ion-input type="file" name="inputFile" (change)="chooseFile($event)" required></ion-input>
 </ion-card>
-<ion-button mode="md" id="btnMenus">crear</ion-button>
+
+<ion-button type="submit">crear</ion-button> 
+
+</ion-content> -->
+
+<ion-content>
+  <ion-card>
+       
+  <ion-label id="label">Aviso</ion-label>
+  <ion-input id="input" placeholder="Aviso"  [(ngModel)]="post.aviso"></ion-input>
+
+  <ion-button mode="md" id="btnMenus"  (click)="loadImageFromDevice()">Seleccionar Imagen</ion-button>
+  </ion-card>
+
+  <ion-button mode="md" id="btnMenus" (click)=" crear(post)">crear</ion-button>
 
 </ion-content>

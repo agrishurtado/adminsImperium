@@ -16,7 +16,7 @@ export class MarketPerformedPage implements OnInit {
   datos:any;
   id:any;
   constructor(private firestore: AngularFirestore,
-    private router:Router,
+    private router:Router, 
     private sanitizer: DomSanitizer,
     ) { }
 

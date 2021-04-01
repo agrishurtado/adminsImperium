@@ -9,7 +9,7 @@
 
         <ion-buttons  slot="end">
           <ion-button>
-            <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\back-arrow.png">
+            <img id="menus" [routerLink]="['/releases']"  src="\assets\iconosmenu\back-arrow.png">
           </ion-button>
         </ion-buttons>
   </ion-toolbar>
@@ -31,28 +31,18 @@ pantalla primaria ejemplo a todas  -->
 
 
   <!-- List of Text Items -->
-<ion-list mode="md">
-  <ion-item>
-    <ion-label id="label" >Pokémon Yellow</ion-label>
-  </ion-item>
-  <hr>
-  <ion-item>
-    <ion-label id="label">Mega Man X</ion-label>
-  </ion-item>
-  <hr>
-  <ion-item>
-    <ion-label id="label">The Legend of Zelda</ion-label>
-  </ion-item>
-  <hr>
-  <ion-item>
-    <ion-label id="label">Pac-Man</ion-label>
-  </ion-item>
-  <hr>
-  <ion-item>
-    <ion-label id="label">Super Mario World</ion-label>
-  </ion-item>
-  <hr>
-</ion-list>
-
-
+  <ion-list mode="md" >
+    <ion-item-sliding *ngFor="let post of datos">
+   <ion-card>
+    <img src="{{post.imag}}">
+   </ion-card>    
+   <ion-card>
+    <ion-card-title id="label"><strong>Comunicado:</strong>{{post.aviso}}</ion-card-title>
+   </ion-card>   
+   <ion-button id="btnMenus" (click)=" deletePost(post.id)">
+    <ion-icon name="trash-outline"></ion-icon>
+  </ion-button>   
+    <hr>     
+  </ion-item-sliding>
+  </ion-list>
 </ion-content>

@@ -19,9 +19,9 @@ export class PollsCreatePage implements OnInit {
 
 async crear (){
   try {
-    if(this.formValidation()){
-    await this.firestore.collection("encuesta").add(this.post);
-    }
+ 
+    await this.firestore.collection("encuesta/").add(this.post);
+    
 
   } catch (error) {
     console.log('Error: al crear encuesta');

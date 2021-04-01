@@ -34,17 +34,17 @@ pantalla primaria ejemplo a todas  -->
   
  <ion-item>
   <ion-label id="label"  style="color: whitesmoke;"  position="floating">Nombre de la Encuesta</ion-label>
-  <ion-input id="input" placeholder="Nombre"  [(ngModel)]="nombre"></ion-input>
+  <ion-input id="input" placeholder="Nombre"  [(ngModel)]="post.nombre"></ion-input>
  </ion-item>
 
  <ion-item>
   <ion-label id="label"  style="color: whitesmoke;">fecha Inicio</ion-label>
-  <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"  [(ngModel)]="post.fecha"></ion-datetime>
+  <ion-datetime  style="color: whitesmoke;" displayFormat="MM DD YY" placeholder="Select Date"  [(ngModel)]="post.fecha"></ion-datetime>
  </ion-item>
 
   <ion-item>
     <ion-label id="label"  style="color: whitesmoke;">fecha Final</ion-label>
-  <ion-datetime displayFormat="MM DD YY" placeholder="Select Date" [(ngModel)]="post.fechaf"></ion-datetime>
+  <ion-datetime  style="color: whitesmoke;" displayFormat="MM DD YY" placeholder="Select Date" [(ngModel)]="post.fechaf"></ion-datetime>
   </ion-item>
 
   <ion-item lines="none">

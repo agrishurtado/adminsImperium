@@ -1,20 +1,21 @@
-<ion-header>
-  <ion-toolbar id="toolbarh" color="black">
-    <ion-buttons slot="start">
-      <ion-button>
-        <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\menu.png">
-      </ion-button>
-    </ion-buttons>
-  
 
-        <ion-buttons  slot="end">
-          <ion-button>
-            <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\back-arrow.png">
-          </ion-button>
-        </ion-buttons>
-  </ion-toolbar>
-</ion-header>
 <ion-content id="content">
+  <ion-header>
+    <ion-toolbar id="toolbarh" color="black">
+      <ion-buttons slot="start">
+        <ion-button>
+          <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\menu.png">
+        </ion-button>
+      </ion-buttons>
+    
+  
+          <ion-buttons  slot="end">
+            <ion-button>
+              <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\back-arrow.png">
+            </ion-button>
+          </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
   <ion-toolbar id="toolbar" color="black">
     <ion-buttons slot="start">
       <ion-button>
@@ -27,12 +28,22 @@
   
   <!-- diseñado para 3 botones -->
 
-  <ion-list mode="md">
-    <ion-item>
-      <ion-label id="label" >Pokémon Yellow</ion-label>
-    </ion-item>
-    <hr>
-  
+  <ion-list mode="md" >
+    <ion-item-sliding *ngFor="let post of datos">
+   <ion-card>
+    <img src="{{post.imag}}">
+   </ion-card>    
+   <ion-card>
+    <ion-card-title id="label"><strong>Producto:</strong>{{post.producto}}</ion-card-title>
+    <ion-card-subtitle id="label"><strong>Precio:</strong>{{post.precio | currency }}</ion-card-subtitle>
+    <ion-card-subtitle id="label"><strong>Contacto:</strong> {{post.telefono}}</ion-card-subtitle>
+    <ion-card-subtitle id="label"><strong>Descripcion:</strong>{{post.descripcion}}</ion-card-subtitle>
+    <ion-card-title id="label"><strong>Fecha:</strong>{{post.fecha |  date :  "dd-MM-yyyy"}}</ion-card-title>
+   </ion-card>   
+   <ion-button id="btnMenus" (click)="deletePost(post.id)">
+    <ion-icon name="trash-outline"></ion-icon>
+  </ion-button>   
+    <hr>     
+  </ion-item-sliding>
   </ion-list>
-  
 </ion-content>

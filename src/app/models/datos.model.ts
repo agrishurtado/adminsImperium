@@ -14,4 +14,8 @@ export interface Datos{
     costo:string;
     estatus:string;
     numPersonas: string;
+    precio:string;
+    producto:string;
+    descripcion:string;
+    telefono:string;
 }

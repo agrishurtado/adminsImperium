@@ -14,6 +14,7 @@ import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser
 export class MarketPerformedPage implements OnInit {
   refe:any;
   datos:any;
+  id:any;
   constructor(private firestore: AngularFirestore,
     private router:Router,
     private sanitizer: DomSanitizer,
@@ -46,6 +47,10 @@ export class MarketPerformedPage implements OnInit {
     } catch (error) {
       console.log("Error: en ver colonos");
     }
+  }
+
+  async deletePost(id: string) { 
+    await this.firestore.doc("market/" + id).delete();    
   }
 
   getImgContent(imgFile:string): SafeUrl {

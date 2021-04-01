@@ -40,7 +40,7 @@
     <ion-card-subtitle id="label"><strong>Descripcion:</strong>{{post.descripcion}}</ion-card-subtitle>
     <ion-card-title id="label"><strong>Fecha:</strong>{{post.fecha |  date :  "dd-MM-yyyy"}}</ion-card-title>
    </ion-card>   
-   <ion-button id="btnMenus" (click)="deletePost(post.id)">
+   <ion-button id="btnMenus" (click)=" deletePost(post.id)">
     <ion-icon name="trash-outline"></ion-icon>
   </ion-button>   
     <hr>     

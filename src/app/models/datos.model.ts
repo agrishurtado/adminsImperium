@@ -20,6 +20,7 @@ export interface Datos{
     telefono:string;
     fechaf:string;
     mensaje:string;
+    aviso:string;
 
     pregunta1:string;
     respuesta1:string;

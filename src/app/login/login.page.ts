@@ -30,7 +30,7 @@ export class LoginPage implements OnInit {
 
   }
 
-  async onSubmitGoogle(){
+  async onSubmitGoogle(email, password){
     try {
       const user = await this.authSvc.loginGoogle();
       if(user){

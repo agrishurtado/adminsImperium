@@ -19,7 +19,7 @@ export class ReleasesCreatePage implements OnInit {
     ngOnInit() {
     }
   
-    async crear(){
+    async crear(post:Datos){
     
       try {
        

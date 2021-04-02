@@ -17,7 +17,7 @@ export class PollsCreatePage implements OnInit {
   ngOnInit() {
   }
 
-async crear (){
+async crear (post: Datos){
   try {
  
     await this.firestore.collection("encuesta/").add(this.post);

@@ -19,7 +19,7 @@ id:any;
   ngOnInit() {
   }
 
-  async crear(){
+  async crear(post: Datos){
   
     try {
      

@@ -80,3 +80,26 @@
     --background-activated:#327aaa;
   }
   
+.message {
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  white-space: pre-wrap;
+}
+
+.other-message{
+  background: #9fc221 ;
+  color: #000000;
+}
+
+.my-message{
+  background: #2c8ed0;
+  color: #000000;
+} 
+
+.time{
+  color: whitesmoke;
+  float: right;
+  font-size: small;
+}
+  

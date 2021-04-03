@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { AutosizeModule } from 'ngx-autosize'; 
 
 import { IonicModule } from '@ionic/angular';
 
@@ -13,7 +14,9 @@ import { EmergenciesSaludPage } from './emergencies-salud.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    EmergenciesSaludPageRoutingModule
+    EmergenciesSaludPageRoutingModule,
+    AutosizeModule
+
   ],
   declarations: [EmergenciesSaludPage]
 })

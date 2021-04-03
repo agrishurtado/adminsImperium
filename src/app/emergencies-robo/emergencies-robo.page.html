@@ -32,31 +32,42 @@
      <ion-card>
       <img  src="\assets\logoImperium.png" alt="">
     </ion-card>
+
+  <ion-card  >
+    <ion-grid>
+      <ion-row *ngFor="let post of datos">
+        <ion-col size="9" *ngIf="currentUser !== post.usuario" class="message other-message">
+          <b> {{post.usuario}}</b><br>
+          <span>{{post.mensaje}}</span>
+          <div class="time" text-right> <br>
+          {{post.f | date:'short' }}</div>
+        </ion-col>
+
+        <ion-col offset="3" size="9" *ngIf="currentUser === post.usuario" class="message my-message">
+          <b> {{post.usuario}}</b><br>
+          <span>{{post.mensaje}}</span>
+          <div class="time" text-right> <br>
+          {{post.f | date:'short' }}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-card>
   
-    <ion-card  >
-      <!-- <ion-card > -->
-        <ion-row>
-          <ion-col size="12" *ngFor="let post of datos " >
-              <ion-button id="recibidos">                           
-              {{post.usuario}} <br>
-              {{post.mensaje}} 
-              </ion-button> 
-          </ion-col>         
-        </ion-row>
-     <div id="fin"></div>
-    </ion-card>
+
 
 </ion-content>
 
 <ion-footer mode="md" id="footer">
   <ion-toolbar id="toolbarf">
     <ion-input id="input" placeholder="Escribe..." [(ngModel)]="post.mensaje"></ion-input>
-    <ion-button id="btnMenus" slot="end">
+    <ion-button id="btnMenus" slot="end" (click)="crear(post)"  [disabled]="post.mensaje === '' ">
       
-       <ion-label id="label" slot="start" (click)="crear(post)">Enviar</ion-label>
+       <ion-label id="label" slot="start" >Enviar</ion-label>
         <ion-icon name="send" slot="end"></ion-icon>
      
     </ion-button>
   </ion-toolbar>
 </ion-footer>
+
 

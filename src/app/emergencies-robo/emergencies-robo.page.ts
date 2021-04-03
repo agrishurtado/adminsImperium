@@ -16,9 +16,10 @@ export class EmergenciesRoboPage implements OnInit {
   @ViewChild("content") content: any;
   post = {} as Datos;
   datos:any;
+  refe:any;
   datosadmin:any;
   usuario: string ="Administrador";
-refe:any;
+
 
   constructor(private firestore: AngularFirestore,
     private router:Router) { }
@@ -46,22 +47,7 @@ refe:any;
   
   }
 
-  // async getadmin(){
-  //   try {
-  //     this.refe = this.firestore.collection("robos", ref => ref.where('usuario','==',this.usuario));
-  //     this.refe.snapshotChanges().subscribe(data=>{
-  //       this.datosadmin = data.map(e=>{
-  //         return{
-  //           id: e.payload.doc.id,
-  //           usuario: e.payload.doc.data()["usuario"],
-  //           mensaje: e.payload.doc.data()["mensaje"],
-  //         }
-  //       })
-  //     })
-  //   } catch (error) {
-  //     console.log("Error: en ver colonos");
-  //   }
-  // }
+
 
   async crear(post: Datos){
     if(this.validation()){

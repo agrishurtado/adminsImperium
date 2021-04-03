@@ -35,19 +35,19 @@
 
   <ion-card  >
     <ion-grid>
-      <ion-row *ngFor="let message of messages">
-        <ion-col size="9" *ngIf="currentUser !== message.user" class="message other-message">
-          <b> {{message.user}}</b><br>
-          <span>{{message.msg}}</span>
+      <ion-row *ngFor="let post of datos">
+        <ion-col size="9" *ngIf="currentUser !== post.usuario" class="message other-message">
+          <b> {{post.usuario}}</b><br>
+          <span>{{post.mensaje}}</span>
           <div class="time" text-right> <br>
-          {{message.createdAt | date:'short' }}</div>
+          {{post.f | date:'short' }}</div>
         </ion-col>
 
-        <ion-col offset="3" size="9" *ngIf="currentUser === message.user" class="message my-message">
-          <b> {{message.user}}</b><br>
-          <span>{{message.msg}}</span>
+        <ion-col offset="3" size="9" *ngIf="currentUser === post.usuario" class="message my-message">
+          <b> {{post.usuario}}</b><br>
+          <span>{{post.mensaje}}</span>
           <div class="time" text-right> <br>
-          {{message.createdAt | date:'short' }}</div>
+          {{post.f | date:'short' }}</div>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -60,8 +60,8 @@
 
 <ion-footer mode="md" id="footer">
   <ion-toolbar id="toolbarf">
-    <ion-input id="input" placeholder="Escribe..." [(ngModel)]="newMsg"></ion-input>
-    <ion-button id="btnMenus" slot="end" (click)="senMessage()"  [disabled]="newMsg === '' ">
+    <ion-input id="input" placeholder="Escribe..." [(ngModel)]="post.mensaje"></ion-input>
+    <ion-button id="btnMenus" slot="end" (click)="crear(post)"  [disabled]="post.mensaje === '' ">
       
        <ion-label id="label" slot="start" >Enviar</ion-label>
         <ion-icon name="send" slot="end"></ion-icon>

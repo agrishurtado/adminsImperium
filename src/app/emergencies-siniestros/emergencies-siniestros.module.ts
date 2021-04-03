@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { AutosizeModule } from 'ngx-autosize'; 
+
 
 import { IonicModule } from '@ionic/angular';
 
@@ -13,8 +15,10 @@ import { EmergenciesSiniestrosPage } from './emergencies-siniestros.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    EmergenciesSiniestrosPageRoutingModule
+    EmergenciesSiniestrosPageRoutingModule,
+    AutosizeModule
   ],
+ 
   declarations: [EmergenciesSiniestrosPage]
 })
 export class EmergenciesSiniestrosPageModule {}

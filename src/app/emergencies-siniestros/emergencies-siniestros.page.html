@@ -1,5 +1,5 @@
 
-<ion-content id="content">
+<ion-content id="content" #content>
   <ion-header>
     <ion-toolbar id="toolbarh" color="black">
       <ion-buttons slot="start">
@@ -23,23 +23,31 @@
         <img id="logoimperium"   src="\assets\logoImperium.png">
       </ion-button>
     </ion-buttons>     
-        <ion-title slot="secondary" id="labelh">Market</ion-title>    
+        <ion-title slot="secondary" id="labelh">Emergencies Robo</ion-title>    
   </ion-toolbar>
 
   
-  <!-- diseñado para 3 botones -->
-  <ion-card>
-    <img  src="\assets\logoImperium.png" alt="">
-  </ion-card>
+  
+     <!-- diseñado para 3 botones -->
+     <ion-card>
+      <img  src="\assets\logoImperium.png" alt="">
+    </ion-card>
 
-  <ion-card>
- 
-    <ion-button mode="md" id="btnMenus" [routerLink]="['/market-create']">crear </ion-button><br>
-    <hr>
-    <ion-button mode="md" id="btnMenus" [routerLink]="['/market-performed']">ver</ion-button><br>
-    
+  
+  
 
-
-  </ion-card>
 
 </ion-content>
+
+<ion-footer mode="md" id="footer">
+  <ion-toolbar id="toolbarf">
+    <ion-input id="input" placeholder="Escribe..."  ></ion-input>
+    <ion-button id="btnMenus" slot="end">
+      
+       <ion-label id="label" slot="start" (click)="sendMessage()">Enviar</ion-label>
+        <ion-icon name="send" slot="end"></ion-icon>
+     
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>
+

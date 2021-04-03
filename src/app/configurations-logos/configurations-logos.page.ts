@@ -19,15 +19,13 @@ post =  {} as Datos;
   ngOnInit() {
   }
 
-  async saveComunicado(){
-     this.post.imag = base64data == "" || base64data == null ? this.post.imag : base64data;
-  } 
 
-  async crear(post: Datos){
+
+  async crear(){
     
     try {
       this.post.imag = base64data == "" || base64data == null ? this.post.imag : base64data;      // falta el nombre de la tabla
-      await this.firestore.collection("logo").add(post);      
+      await this.firestore.collection("logo").add(this.post);      
     } catch (error) {
       console.log('Error: crear los datros');
     }   

@@ -164,6 +164,18 @@ const routes: Routes = [
     path: 'balance-authorize-menu',
     loadChildren: () => import('./balance-authorize-menu/balance-authorize-menu.module').then( m => m.BalanceAuthorizeMenuPageModule)
   },
+  {
+    path: 'emergencies-robo',
+    loadChildren: () => import('./emergencies-robo/emergencies-robo.module').then( m => m.EmergenciesRoboPageModule)
+  },
+  {
+    path: 'emergencies-siniestros',
+    loadChildren: () => import('./emergencies-siniestros/emergencies-siniestros.module').then( m => m.EmergenciesSiniestrosPageModule)
+  },
+  {
+    path: 'emergencies-salud',
+    loadChildren: () => import('./emergencies-salud/emergencies-salud.module').then( m => m.EmergenciesSaludPageModule)
+  },
 
 
 

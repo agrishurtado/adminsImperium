@@ -21,6 +21,7 @@ export interface Datos{
     fechaf:string;
     mensaje:string;
     aviso:string;
+    usuario:string;
 
     pregunta1:string;
     respuesta1:string;

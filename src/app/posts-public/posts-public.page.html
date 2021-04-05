@@ -1,9 +1,72 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>posts-public</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
+<!-- pantalla terminada en fronend  -->
+
+
+<ion-content id="content">
+  <ion-header>
+    <ion-toolbar id="toolbarh" color="black">
+      <ion-buttons slot="start">
+        <ion-button>
+          <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\menu.png">
+        </ion-button>
+      </ion-buttons>
+    
+  
+          <ion-buttons  slot="end">
+            <ion-button>
+              <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\back-arrow.png">
+            </ion-button>
+          </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-toolbar id="toolbar" color="black">
+    <ion-buttons slot="start">
+      <ion-button>
+        <img id="logoimperium"   src="\assets\logoImperium.png">
+      </ion-button>
+    </ion-buttons>
+        <ion-title slot="secondary" id="labelh">posts publics</ion-title>    
+  </ion-toolbar>
+
+  
+  <ion-card>
+    <img  src="\assets\logoImperium.png" alt="">
+  </ion-card>
+
+  <ion-card  >
+    <ion-grid>
+      <ion-row *ngFor="let post of datos">
+        <ion-col size="9" *ngIf="currentUser !== post.usuario" class="message other-message">
+          <b> {{post.usuario}}</b><br>
+          <span>{{post.mensaje}}</span>
+          <div class="time" text-right> <br>
+          {{post.f | date:'short' }}</div>
+        </ion-col>
+
+        <ion-col offset="3" size="9" *ngIf="currentUser === post.usuario" class="message my-message">
+          <b> {{post.usuario}}</b><br>
+          <span>{{post.mensaje}}</span>
+          <div class="time" text-right> <br>
+          {{post.f | date:'short' }}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-card>
+  
+
 
 </ion-content>
+
+<ion-footer mode="md" id="footer">
+  <ion-toolbar id="toolbarf">
+    <ion-input id="input" placeholder="Escribe..." [(ngModel)]="post.mensaje"></ion-input>
+    <ion-button id="btnMenus" slot="end" (click)="crear(post)"  [disabled]="post.mensaje === '' ">
+      
+       <ion-label id="label" slot="start" >Enviar</ion-label>
+        <ion-icon name="send" slot="end"></ion-icon>
+     
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

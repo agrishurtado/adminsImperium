@@ -17,19 +17,7 @@ export class EmergenciesRoboPage implements OnInit {
   refe:any;
  
 
-     messages = [
-    { user: 'simon',
-     createdAt : '1554090856000',
-    msg: 'hey whats up mate?'
-  },
-  { user: 'max',
-  createdAt : '1554090856000',
-  msg: 'working on the Ionic mission, you'
-  },
-  
-   ];
-
-   newMsg= '';
+ 
    currentUser = 'Administrador';
    @ViewChild(IonContent) content: IonContent;
   constructor(public router: Router,
@@ -42,17 +30,17 @@ export class EmergenciesRoboPage implements OnInit {
 
 
 
- senMessage(){
-  this.messages.push({
-    user: 'max',
-    createdAt : '1554090856000',
-    msg: this.newMsg
-  });
-  this.newMsg ='';
-  setTimeout(() => {
-    this.content.scrollToBottom(200);
-  });
- }
+//  senMessage(){
+//   this.messages.push({
+//     user: 'max',
+//     createdAt : '1554090856000',
+//     msg: this.newMsg
+//   });
+//   this.newMsg ='';
+//   setTimeout(() => {
+//     this.content.scrollToBottom(200);
+//   });
+//  }
  async crear(post: Datos){
   if(this.validation()){
   try {

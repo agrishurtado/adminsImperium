@@ -1,56 +1,65 @@
-.status {
-    color: grey;
-    font-weight: 400;
-    font-size: 13px;
-}
-ion-header ion-avatar {
-    padding: 3px;
-}
-#menus{
-    width: 25px;
+#toolbarh{   
+    padding-top: 10px;
   }
-  ion-content{
-    position: relative;
-}
-.bg {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background-image: url("../../assets/iconosmenu/back-arrow.png");
-    background-size: cover;
-}
-ion-footer ion-toolbar {
-    --background: #f4f4f4;
-}
-ion-footer ion-button {
-    font-weight: 600;
-}
-ion-input {
-    background: white !important;
-    height: 31px;
-    width: 95%;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-    border-radius: 4px;
-    border: 1px #dfdfdf solid;
-    --padding-start: 8px;
-}
-ion-item {
-    --background: transparent;
-}
-ion-badge {
-    padding: 6px 9px;
-    border-radius: 6px;
-    font-weight: 400;
-    font-size: 15px;
-    box-shadow: 1px 1px 3px #00000029;
-}
-ion-item ion-note {
-    font-size: 10px;
-    margin-left: 8px;
-}
-ion-item ion-note ion-icon{
-    font-size: 20px;
-    margin-bottom: -6px;
-    margin-left: -2px;
-}
+  #toolbar{   
+      padding-top: 5px;
+   }
+   #menus{
+     width: 25px;
+   }
+   #labelh{
+     margin: 15px;
+     text-align: center;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     color: whitesmoke;
+     font-size: 15px;
+   }
+   
+   #content{    
+     --ion-background-color: #000000 ;  
+   }
+   #titulos{
+     color: whitesmoke;
+   }
+   #logoimperium{
+     margin: 1px;
+     width: 120px;
+   }
+   
+   #logo{
+     width: 40%;
+   }
+   ion-col{
+     margin-top: 5px;
+     text-align: center;
+   }
+   #label{
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     color: whitesmoke;
+     font-size: 15px;
+   }
+   
+   ion-card{
+     padding-top:40px;
+    position: wrap;
+    
+   }
+   #btnMenus{
+    //  height:35px;
+     margin-top: 20px;
+     margin-bottom: 20px;
+     width: 100%;
+     color: whitesmoke;
+    --background:black;
+    --background-activated:#333;
+   }
+  
+   hr{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.075), rgb(255, 255, 255), rgba(255, 255, 255, 0.075));
+   }
+    #whatsapp{
+      margin: 5px;
+      width: 35px;
+    }

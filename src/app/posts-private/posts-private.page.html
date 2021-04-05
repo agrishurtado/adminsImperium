@@ -1,46 +1,55 @@
-<!-- <ion-header>
-  <ion-toolbar>
-    <ion-title>posts-private</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
-
-</ion-content> -->
-
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button text="Conv."></ion-back-button>
-    </ion-buttons>
-    <ion-title>Luke Skywalker<br><div class="status">En ligne</div></ion-title>
-    <ion-avatar slot="end">
-      <img id="menus" src="../../assets/logoImperium.png">
-    </ion-avatar>
-  </ion-toolbar>
-</ion-header>
-<ion-content>
-  <div class="bg"></div>
-  <ion-item lines="none">
-    <ion-badge color="warning" slot="end">Hey Luke como te va ?! <ion-note color="medium">17:01 <ion-icon name="done-all"></ion-icon></ion-note></ion-badge>
-  </ion-item>
+<ion-content id="content" #content>
+  <ion-header>
+    <ion-toolbar id="toolbarh" color="black">
+      <ion-buttons slot="start">
+        <ion-button>
+          <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\menu.png">
+        </ion-button>
+      </ion-buttons>
+    
   
-  <ion-item lines="none">
-    <ion-badge color="light" slot="start">mark bien gracias <ion-note color="medium">17:04</ion-note></ion-badge>
-  </ion-item>
- </ion-content>
- <ion-footer>
-  <ion-toolbar>
+          <ion-buttons  slot="end">
+            <ion-button>
+              <img id="menus" [routerLink]="['/home']"  src="\assets\iconosmenu\back-arrow.png">
+            </ion-button>
+          </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-toolbar id="toolbar" color="black">
     <ion-buttons slot="start">
-      <ion-button fill="outline" shape="round" size="small">
-        <ion-icon slot="icon-only" name="arrow-round-up"></ion-icon>
+      <ion-button>
+        <img id="logoimperium"   src="\assets\logoImperium.png">
       </ion-button>
-    </ion-buttons>
-    <ion-input placeholder="Votre message"></ion-input>
-    <ion-buttons slot="end">
-      <ion-button >
-        Envoyer
-      </ion-button>
-    </ion-buttons>
+    </ion-buttons>     
+        <ion-title slot="secondary" id="labelh">Post Private</ion-title>    
   </ion-toolbar>
-</ion-footer>
+
+  
+  
+     <!-- diseñado para 3 botones -->
+     <ion-card>
+      <img  src="\assets\logoImperium.png" alt="">
+    </ion-card>
+
+    <ion-card>
+      <ion-list>
+        <ion-item *ngFor="let post of datos ">
+          <ion-avatar slot="start">
+            <img src="/assets/iconosmenu/usuario.png">
+          </ion-avatar>
+          <ion-label> 
+            <a href="https://api.whatsapp.com/send?phone=+521{{post.telefono}}">
+              <h3 style="color: whitesmoke;">{{ post.domicilio}}</h3> </a>          
+          </ion-label>
+        </ion-item>
+      </ion-list> 
+    </ion-card>
+
+  
+
+</ion-content>
+
+
+

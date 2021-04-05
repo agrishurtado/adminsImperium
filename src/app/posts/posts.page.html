@@ -36,19 +36,7 @@
 
   <ion-card>
     
-     <ion-button mode="md" id="btnMenus"  >
-        <img id="whatsapp" slot="start" src="\assets\iconosmenu\whatsapp.png" alt="">
-      
-        <ion-label> 
-          <a href="https://api.whatsapp.com">
-            <h3 style="color: whitesmoke;">{{ telefono}}</h3> </a>          
-        </ion-label>
-    </ion-button>
-    <!-- <ion-button mode="md" id="btnMenus"  href="{{url}}">Whatsapp
-      <img id="whatsapp" slot="start" src="\assets\iconosmenu\whatsapp.png" alt="">
-    </ion-button><br> -->
-    <!-- <ion-button mode="md" id="btnMenus" [routerLink]="['/posts-private']">privates</ion-button><br> -->
-
+     <ion-button mode="md" id="btnMenus" [routerLink]="['/posts-private']" >Private</ion-button>
     <hr>
     <ion-button mode="md" id="btnMenus" [routerLink]="['/posts-public']">publics</ion-button><br>
     
